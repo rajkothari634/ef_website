@@ -4,6 +4,7 @@ import companyImg from "../images/articleimg.png";
 import { useMediaPredicate } from "react-media-hook";
 
 const HeaderDiv = styled.div`
+  border: 2px solid green;
   display: flex;
   flex-wrap: wrap;
   min-height: 60px;
@@ -72,7 +73,6 @@ const NavList = styled.ul`
   justify-content: flex-start;
   align-items: start;
   margin-right: 0;
-  cursor: pointer;
 
   @media (min-width: 1100px) {
     justify-content: flex-end;
@@ -199,4 +199,13 @@ const Header = () => {
   );
 };
 
-export default Header;
+export {
+  Header,
+  HeaderDiv,
+  HeaderImg,
+  HeaderTitle,
+  NavDiv,
+  NavList,
+  NavListItem,
+  TitleDiv,
+};
