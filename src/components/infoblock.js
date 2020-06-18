@@ -4,6 +4,7 @@ import styled from "styled-components";
 const MainDiv = styled.div`
   padding-top: 40px;
   width: 100%;
+  margin-top: ${(props) => props.marginTop};
 `;
 const InfoDiv = styled.div`
   width: 100%;
@@ -17,22 +18,24 @@ const InfoDiv = styled.div`
 `;
 //para div width is 30% before and margin left 10% before for @media a
 const ParaDiv = styled.div`
-  width: 90%;
+  width: 80%;
   border-radius: 8px;
   font-size: 25px;
-  margin-left: 3%;
+  margin-left: 5%;
   margin-bottom: 60px;
-  margin-right: 2%;
+  margin-right: 5%;
   color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   line-height: 40px;
+  padding: 20px;
   padding: ${(props) =>
     props.backgroundColor === "#00000000" ? "20px" : "5%"};
   box-shadow: ${(props) => props.boxShadow};
   @media (min-width: 1100px) {
     width: 35%;
     margin-left: 7%;
-    margin-bottom: 0px;
+    padding: ${(props) =>
+      props.backgroundColor === "#00000000" ? "20px" : "5%"};
   }
 `;
 
@@ -58,7 +61,7 @@ const InfoHead = styled.p`
 const InfoBlock = (props) => {
   if (props.animationSide === "right") {
     return (
-      <MainDiv>
+      <MainDiv className={"infoblock"} marginTop={props.marginTop}>
         <center>
           <InfoHead color={props.headColor}>{props.infoHead}</InfoHead>
         </center>
@@ -76,7 +79,7 @@ const InfoBlock = (props) => {
     );
   }
   return (
-    <MainDiv>
+    <MainDiv marginTop={props.marginTop}>
       <center>
         <InfoHead color={props.headColor}>{props.infoHead}</InfoHead>
       </center>
@@ -94,4 +97,4 @@ const InfoBlock = (props) => {
   );
 };
 
-export default InfoBlock;
+export { InfoBlock };
