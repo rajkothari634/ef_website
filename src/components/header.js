@@ -4,7 +4,6 @@ import companyImg from "../images/articleimg.png";
 import { useMediaPredicate } from "react-media-hook";
 
 const HeaderDiv = styled.div`
-  border: 2px solid green;
   display: flex;
   flex-wrap: wrap;
   min-height: 60px;
