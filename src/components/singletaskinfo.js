@@ -24,13 +24,24 @@ const SingleTask = (props) => {
       <center>
         <TaskImg src={props.src} />
       </center>
-      <TaskPara color={props.headingColor} style={{ fontSize: "30px" }}>
+      <TaskPara
+        color={props.headingColor}
+        style={{
+          fontSize: props.headingFontSize ? props.headingFontSize : "30px",
+        }}
+      >
         {props.heading}
       </TaskPara>
-      <TaskPara color={props.infoColor} style={{ marginTop: "0px" }}>
+      <TaskPara
+        color={props.infoColor}
+        style={{
+          fontSize: props.infoFontSize ? props.infoFontSize : "30px",
+          marginTop: "0px",
+        }}
+      >
         {props.info}
       </TaskPara>
     </TaskDiv>
   );
 };
-export default SingleTask;
+export { SingleTask };
