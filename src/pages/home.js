@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "../components/header";
+import { Header } from "../components/header";
 import ContactUs from "../components/contactus";
 import SingleTask from "../components/singletaskinfo";
 import articleimg from "../images/articleimg.png";
-import InfoBlock from "../components/infoblock";
+import { InfoBlock } from "../components/infoblock";
 
 const HomePageDiv = styled.div`
   display: flex;
@@ -18,7 +18,6 @@ const TitleDiv = styled.div`
   background-color: #211551;
   padding-top: 150px;
 `;
-
 const PageHeading = styled.p`
   width: 90%;
   font-size: 50px;
@@ -194,7 +193,6 @@ const HomePage = () => {
       <InfoBlock
         headColor={"#000000"}
         infoHead={"Why do we make emphasis on full control and transparency?"}
-        boxShadow={"-2px 2px 14px 0px rgba(255,255,255,0.8)"}
         paraBackgroundColor={"#00000000"}
         animationSide={"right"}
         paraColor={"#000000"}
@@ -214,4 +212,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export { HomePage, HomePageDiv, PageHeading, TitleDiv, PageHeaderInfo };
