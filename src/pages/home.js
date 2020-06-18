@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Header } from "../components/header";
 import ContactUs from "../components/contactus";
-import SingleTask from "../components/singletaskinfo";
+import { SingleTask } from "../components/singletaskinfo";
 import articleimg from "../images/articleimg.png";
 import { InfoBlock } from "../components/infoblock";
 
@@ -212,4 +212,12 @@ const HomePage = () => {
   );
 };
 
-export { HomePage, HomePageDiv, PageHeading, TitleDiv, PageHeaderInfo };
+export {
+  HomePage,
+  HomePageDiv,
+  PageHeading,
+  TitleDiv,
+  PageHeaderInfo,
+  ContactBtn,
+  TaskInfo,
+};
