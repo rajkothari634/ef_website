@@ -9,6 +9,7 @@ import {
   PageHeading,
   TitleDiv,
   PageHeaderInfo,
+  ContactBtn,
 } from "../pages/home";
 
 const BidderPageDiv = HomePageDiv;
