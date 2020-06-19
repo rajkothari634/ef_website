@@ -200,13 +200,11 @@ const HomePage = () => {
 
        \n The more knowledge and control publishers have over their programmatic advertising, the more empowered and reliable the whole industry becomes.`}
       />
-      <ContactBtn
-        style={{ margin: "10%" }}
-        hoverBorder={"2px solid red"}
-        hoverFontColor={"red"}
-      >
+
+      <ContactBtn hoverBorder={"2px solid red"} hoverFontColor={"red"}>
         Learn More
       </ContactBtn>
+
       <ContactUs />
     </HomePageDiv>
   );
