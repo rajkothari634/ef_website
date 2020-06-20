@@ -16,8 +16,6 @@ const AdExchangeDiv = HomePageDiv;
 const AdExchangePage = (props) => {
   return (
     <AdExchangeDiv>
-      <Header />
-
       <TitleDiv>
         <center>
           <PageHeading>BidMachine In-House Ad Exchange</PageHeading>
