@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import companyImg from "../images/articleimg.png";
 import { useMediaPredicate } from "react-media-hook";
+import { Link } from "react-router-dom";
 
 const HeaderDiv = styled.div`
   display: flex;
@@ -38,7 +39,7 @@ const HeaderImg = styled.img`
 `;
 const HeaderTitle = styled.h1`
   color: #ffffff;
-  fontsize: 40px;
+  font-size: 30px;
   font-style: bold;
   margin-left: 10px;
   margin-top: 18px;
@@ -151,7 +152,11 @@ const Header = () => {
       <NavOpener onClick={() => setIsNavBar(!isNavBar)} />
       <TitleDiv>
         <HeaderImg src={companyImg} />
-        <HeaderTitle>Earnest Fintech</HeaderTitle>
+        <HeaderTitle>
+          <Link to="/home" style={{ textDecoration: "none" }}>
+            Earnest Fintech
+          </Link>
+        </HeaderTitle>
       </TitleDiv>
       <NavDiv
         style={{
@@ -162,28 +167,56 @@ const Header = () => {
           <NavListItemDrop color={"#ffffff"}>
             <span>Publishers</span>
             <DropDownDiv>
-              <DropDownItem>MarketPlace</DropDownItem>
-              <DropDownItem>Bidder</DropDownItem>
-              <DropDownItem>In-House Ad Exchange</DropDownItem>
+              <DropDownItem>
+                <Link to="/marketplace" style={{ textDecoration: "none" }}>
+                  MarketPlace
+                </Link>
+              </DropDownItem>
+              <DropDownItem>
+                <Link to="/bidder" style={{ textDecoration: "none" }}>
+                  Bidder
+                </Link>
+              </DropDownItem>
+              <DropDownItem>
+                <Link to="/adexchange" style={{ textDecoration: "none" }}>
+                  In-House Ad Exchange
+                </Link>
+              </DropDownItem>
             </DropDownDiv>
           </NavListItemDrop>
-          <NavListItem color={"#ffffff"}>Demand Partners</NavListItem>
-          <NavListItem color={"#ffffff"}>End User</NavListItem>
+          <NavListItem color={"#ffffff"}>
+            <Link to="/demandpartner" style={{ textDecoration: "none" }}>
+              Demand Partners
+            </Link>
+          </NavListItem>
+          <NavListItem color={"#ffffff"}>
+            <Link to="/enduser" style={{ textDecoration: "none" }}>
+              End User
+            </Link>
+          </NavListItem>
           <NavListItem color={"#ffffff"}>About</NavListItem>
           <NavListItem color={"#ffffff"}>Blog</NavListItem>
           <NavListItemDrop color={"#ffffff"}>
             <span>Log In / Sign In</span>
             <DropDownDiv>
-              <DropDownItem>DSP</DropDownItem>
-              <DropDownItem>SSP</DropDownItem>
+              <DropDownItem>
+                <Link to="/auth/dsp" style={{ textDecoration: "none" }}>
+                  DSP
+                </Link>
+              </DropDownItem>
+              <DropDownItem>
+                <Link to="/auth/ssp" style={{ textDecoration: "none" }}>
+                  SSP
+                </Link>
+              </DropDownItem>
             </DropDownDiv>
           </NavListItemDrop>
           <NavListItem
             color={"#ffffff"}
             bgColor={"#e84039"}
             borderRadius={"6px"}
-            maxwidth={"80px"}
             style={{
+              width: "115px",
               padding: "8px",
               paddingLeft: "16px",
               paddingRight: "16px",
