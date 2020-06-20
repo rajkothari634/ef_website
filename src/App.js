@@ -9,7 +9,7 @@ import AdExchangePage from "./pages/adexchange";
 import { AuthPage } from "./components/Auth";
 
 const App = () => {
-  return <AuthPage />;
+  return <AuthPage authType={"ssp"} />;
 };
 
 export default App;
