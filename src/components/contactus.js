@@ -10,13 +10,14 @@ const QuestionDiv = styled.div`
 `;
 const Question = styled.p`
   width: 100%;
+  margin-top: 40px;
   text-align: center;
   color: #ffffff;
   font-size: 50px;
   cursor: pointer;
 `;
 const ContactBtn = styled.div`
-    padding-top: 16px;
+    padding-top: 4px;
     font-size: 24px;
     width: 240px;
     height: 44px;
@@ -27,11 +28,12 @@ const ContactBtn = styled.div`
     background-color: #e84039;
     border-radius: 5px;
     cursor:pointer;
+    margin-top:50px;
     &:hover{
         border: 2px solid #ffffff;
         background-color: #00000000;
-        padding-top:14px;
-        height: 42px;
+        padding-top:2px;
+        height: 44px;
     }
 `;
 
