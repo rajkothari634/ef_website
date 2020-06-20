@@ -106,7 +106,7 @@ const AuthPage = (props) => {
             marginTop: "40px",
           }}
         >
-          Demand Side
+          {props.authType === "dsp" ? "Demand Side" : "Supply Side"}
         </header>
         <header
           style={{
@@ -121,7 +121,7 @@ const AuthPage = (props) => {
       </TypeDiv>
       <FormDiv>
         <DeciderDiv
-          style={{ display: props.authType === "ssp" ? "block" : "none" }}
+          style={{ display: props.authType === "ssp" ? "flex" : "none" }}
         >
           <RegistrationDiv
             style={{
