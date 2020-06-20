@@ -18,7 +18,7 @@ const TitleDiv = styled.div`
 `;
 const PageHeaderInfo = styled.p`
   width: 60%;
-  font-size: 40px;
+  font-size: 33px;
   color: #ffffff;
   text-align: center;
   line-height: 60px;
@@ -27,7 +27,7 @@ const PageHeaderInfo = styled.p`
 `;
 const PageHeading = styled.p`
   width: 90%;
-  font-size: 50px;
+  font-size: 45px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 45px;
@@ -39,8 +39,6 @@ const PageHeading = styled.p`
 const DemandPartnerPage = () => {
   return (
     <BidderPageDiv>
-      <Header />
-
       <TitleDiv>
         <center>
           <PageHeading>Manage and advance your mobile campaigns</PageHeading>
