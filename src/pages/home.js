@@ -20,7 +20,7 @@ const TitleDiv = styled.div`
 `;
 const PageHeading = styled.p`
   width: 90%;
-  font-size: 50px;
+  font-size: 45px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 45px;
@@ -29,7 +29,7 @@ const PageHeading = styled.p`
   }
 `;
 const ContactBtn = styled.div`
-    padding-top: 16px;
+    padding-top: 4px;
     font-size: 24px;
     width: 240px;
     text-align: center;
@@ -44,14 +44,14 @@ const ContactBtn = styled.div`
         border: ${(props) => props.hoverBorder};
         color: ${(props) => props.hoverFontColor};
         background-color: #00000000;
-        padding-top:14px;
-        height: 42px;
+        padding-top:2px;
+        height: 44px;
     }
 `;
 
 const PageHeaderInfo = styled.p`
   width: 60%;
-  font-size: 40px;
+  font-size: 33px;
   color: #ffffff;
   text-align: center;
   line-height: 60px;
@@ -74,7 +74,6 @@ const TaskInfo = styled.div`
 const HomePage = () => {
   return (
     <HomePageDiv>
-      <Header />
       <TitleDiv>
         <center>
           <PageHeading>
@@ -140,7 +139,7 @@ const HomePage = () => {
             borderRadius={"10px"}
             boxShadow={"-2px 2px 14px 0px rgba(255,255,255,0.8)"}
             style={{
-              width: "70%",
+              width: "80%",
               marginTop: "45px",
               padding: "5%",
             }}
@@ -191,6 +190,7 @@ const HomePage = () => {
         </center>
       </TitleDiv>
       <InfoBlock
+        marginTop={"60px"}
         headColor={"#000000"}
         infoHead={"Why do we make emphasis on full control and transparency?"}
         paraBackgroundColor={"#00000000"}
@@ -201,7 +201,11 @@ const HomePage = () => {
        \n The more knowledge and control publishers have over their programmatic advertising, the more empowered and reliable the whole industry becomes.`}
       />
 
-      <ContactBtn hoverBorder={"2px solid red"} hoverFontColor={"red"}>
+      <ContactBtn
+        style={{ marginLeft: "10%", marginBottom: "40px" }}
+        hoverBorder={"2px solid red"}
+        hoverFontColor={"red"}
+      >
         Learn More
       </ContactBtn>
 
