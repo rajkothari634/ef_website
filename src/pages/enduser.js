@@ -47,7 +47,6 @@ const ResponsiveBtn = styled(ContactBtn)`
 const EndUser = () => {
   return (
     <EndUserDiv>
-      <Header />
       <TitleDiv>
         <EndUserPageHeading>
           Brands want your attention. Make ’em buy it.
