@@ -41,7 +41,6 @@ const BidderPageDiv = HomePageDiv;
 const BidderPage = () => {
   return (
     <BidderPageDiv>
-      <Header />
       <TitleDiv>
         <center>
           <PageHeading>BidMachine Bidder</PageHeading>
