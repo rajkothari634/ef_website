@@ -29,7 +29,6 @@ const BtnDiv = styled.div`
 const MarketPlacePage = () => {
   return (
     <MarketPageDiv>
-      <Header />
       <TitleDiv>
         <center>
           <PageHeading>BidMachine Marketplace</PageHeading>
