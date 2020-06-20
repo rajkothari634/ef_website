@@ -20,10 +20,11 @@ const InfoDiv = styled.div`
 const ParaDiv = styled.div`
   width: 80%;
   border-radius: 8px;
-  font-size: 25px;
+  font-size: 22px;
   margin-left: 5%;
   margin-bottom: 60px;
   margin-right: 5%;
+  margin-top: 30px;
   color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   line-height: 40px;
