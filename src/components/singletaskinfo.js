@@ -14,7 +14,7 @@ const TaskPara = styled.p`
   width: 100%;
   text-align: center;
   color: ${(props) => props.color};
-  font-size: 25px;
+  font-size: 22px;
   line-height: 40px;
 `;
 
@@ -35,7 +35,7 @@ const SingleTask = (props) => {
       <TaskPara
         color={props.infoColor}
         style={{
-          fontSize: props.infoFontSize ? props.infoFontSize : "30px",
+          fontSize: props.infoFontSize ? props.infoFontSize : "25px",
           marginTop: "0px",
         }}
       >
