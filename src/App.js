@@ -6,9 +6,10 @@ import DemandPartner from "./pages/demandpartner";
 import EndUser from "./pages/enduser";
 import MarketPlacePage from "./pages/marketplace";
 import AdExchangePage from "./pages/adexchange";
+import { AuthPage } from "./components/Auth";
 
 const App = () => {
-  return <AdExchangePage />;
+  return <AuthPage />;
 };
 
 export default App;
