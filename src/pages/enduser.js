@@ -16,19 +16,22 @@ const EndUserPageHeading = styled.p`
   width: 50%;
   text-align: left;
   margin-bottom: 20px;
-  font-size: 40px;
+  font-size: 34px;
   padding-left: 10%;
   color: #ffffff;
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     font-size: 60px;
   }
 `;
 const EndUserPageHeadingInfo = styled(PageHeaderInfo)`
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 35px;
   width: 50%;
   padding-left: 10%;
+  @media (min-width: 1000px) {
+    font-size: 25px;
+  }
 `;
 const ResponsiveBtn = styled(ContactBtn)`
   margin-left: 10%;
@@ -39,8 +42,8 @@ const ResponsiveBtn = styled(ContactBtn)`
     border: ${(props) => props.hoverBorder};
     color: ${(props) => props.hoverFontColor};
     background-color: #00000000;
-    padding-top: 14px;
-    height: 33px;
+    padding-top: 2px;
+    height: 35px;
   }
 `;
 
