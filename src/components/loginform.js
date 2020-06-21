@@ -12,8 +12,8 @@ const LoginForm = (props) => {
       onValidSubmit={handleValidSubmit()}
       style={{ display: props.display === "login" ? "block" : "none" }}
     >
-      <AvField name="email" label="Email *" type="text" required />
-      <AvField name="password" label="Password *" required />
+      <AvField name="email" label="Email *" type="email" required />
+      <AvField name="password" label="Password *" type="password" required />
 
       <FormGroup>
         <Button
