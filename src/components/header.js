@@ -4,6 +4,21 @@ import companyImg from "../images/articleimg.png";
 import { useMediaPredicate } from "react-media-hook";
 import { Link } from "react-router-dom";
 
+const SimpleLink = styled(Link)`
+  &:link {
+    color: ${(props) => props.color};
+  }
+  &:visited {
+    color: ${(props) => props.color};
+  }
+  &:hover {
+    color: #fcbe46;
+  }
+  &:active {
+    color: ${(props) => props.color};
+  }
+`;
+
 const HeaderDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +36,7 @@ const TitleDiv = styled.div`
   max-width: 90%;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     flex: 26%;
     max-width: 26%;
     justify-content: flex-end;
@@ -33,7 +48,7 @@ const HeaderImg = styled.img`
   width: 40px;
   height: 40px;
   margin-top: 0px;
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     margin-top: 10px;
   }
 `;
@@ -42,8 +57,8 @@ const HeaderTitle = styled.h1`
   font-size: 30px;
   font-style: bold;
   margin-left: 10px;
-  margin-top: 18px;
-  @media (min-width: 1100px) {
+  margin-top: 7px;
+  @media (min-width: 1300px) {
     margin-top: 10px;
   }
 `;
@@ -55,7 +70,7 @@ const NavDiv = styled.div`
   justify-content: flex-start;
   align-items: start;
   display: none;
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     max-height: 60px;
     display: flex;
     flex: 73%;
@@ -74,7 +89,7 @@ const NavList = styled.ul`
   align-items: start;
   margin-right: 0;
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     justify-content: flex-end;
     display: flex;
     align-items: end;
@@ -140,22 +155,26 @@ const NavOpener = styled.div`
   background-color: green;
   display: block;
   cursor: pointer;
-  @media (min-width: 1100px) {
+  @media (min-width: 1300px) {
     display: none;
   }
 `;
 const Header = () => {
   const [isNavBar, setIsNavBar] = useState(false);
-  const isDesktop = useMediaPredicate("(min-width: 1100px)");
+  const isDesktop = useMediaPredicate("(min-width: 1300px)");
   return (
     <HeaderDiv>
       <NavOpener onClick={() => setIsNavBar(!isNavBar)} />
       <TitleDiv>
         <HeaderImg src={companyImg} />
         <HeaderTitle>
-          <Link to="/home" style={{ textDecoration: "none" }}>
+          <SimpleLink
+            color={"#ffffff"}
+            to="/home"
+            style={{ textDecoration: "none" }}
+          >
             Earnest Fintech
-          </Link>
+          </SimpleLink>
         </HeaderTitle>
       </TitleDiv>
       <NavDiv
@@ -168,31 +187,51 @@ const Header = () => {
             <span>Publishers</span>
             <DropDownDiv>
               <DropDownItem>
-                <Link to="/marketplace" style={{ textDecoration: "none" }}>
+                <SimpleLink
+                  color={"#000000"}
+                  to="/marketplace"
+                  style={{ textDecoration: "none" }}
+                >
                   MarketPlace
-                </Link>
+                </SimpleLink>
               </DropDownItem>
               <DropDownItem>
-                <Link to="/bidder" style={{ textDecoration: "none" }}>
+                <SimpleLink
+                  color={"#000000"}
+                  to="/bidder"
+                  style={{ textDecoration: "none" }}
+                >
                   Bidder
-                </Link>
+                </SimpleLink>
               </DropDownItem>
               <DropDownItem>
-                <Link to="/adexchange" style={{ textDecoration: "none" }}>
+                <SimpleLink
+                  color={"#000000"}
+                  to="/adexchange"
+                  style={{ textDecoration: "none" }}
+                >
                   In-House Ad Exchange
-                </Link>
+                </SimpleLink>
               </DropDownItem>
             </DropDownDiv>
           </NavListItemDrop>
           <NavListItem color={"#ffffff"}>
-            <Link to="/demandpartner" style={{ textDecoration: "none" }}>
+            <SimpleLink
+              color={"#ffffff"}
+              to="/demandpartner"
+              style={{ textDecoration: "none" }}
+            >
               Demand Partners
-            </Link>
+            </SimpleLink>
           </NavListItem>
           <NavListItem color={"#ffffff"}>
-            <Link to="/enduser" style={{ textDecoration: "none" }}>
+            <SimpleLink
+              color={"#ffffff"}
+              to="/enduser"
+              style={{ textDecoration: "none" }}
+            >
               End User
-            </Link>
+            </SimpleLink>
           </NavListItem>
           <NavListItem color={"#ffffff"}>About</NavListItem>
           <NavListItem color={"#ffffff"}>Blog</NavListItem>
@@ -200,14 +239,22 @@ const Header = () => {
             <span>Log In / Sign In</span>
             <DropDownDiv>
               <DropDownItem>
-                <Link to="/auth/dsp" style={{ textDecoration: "none" }}>
+                <SimpleLink
+                  color={"#000000"}
+                  to="/auth/dsp"
+                  style={{ textDecoration: "none" }}
+                >
                   DSP
-                </Link>
+                </SimpleLink>
               </DropDownItem>
               <DropDownItem>
-                <Link to="/auth/ssp" style={{ textDecoration: "none" }}>
+                <SimpleLink
+                  color={"#000000"}
+                  to="/auth/ssp"
+                  style={{ textDecoration: "none" }}
+                >
                   SSP
-                </Link>
+                </SimpleLink>
               </DropDownItem>
             </DropDownDiv>
           </NavListItemDrop>
