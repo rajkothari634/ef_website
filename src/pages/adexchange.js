@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { Header } from "../components/header";
 import ContactUs from "../components/contactus";
 import { InfoBlock } from "../components/infoblock";
 import {
