@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import companyImg from "../images/articleimg.png";
 import { useMediaPredicate } from "react-media-hook";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const SimpleLink = styled(Link)`
+  color: ${(props) => props.color};
+  text-decoration: none;
   &:link {
     color: ${(props) => props.color};
   }
@@ -15,7 +17,7 @@ const SimpleLink = styled(Link)`
     color: #fcbe46;
   }
   &:active {
-    color: ${(props) => props.color};
+    color: #fcbe46;
   }
 `;
 
@@ -162,13 +164,33 @@ const NavOpener = styled.div`
 const Header = () => {
   const [isNavBar, setIsNavBar] = useState(false);
   const isDesktop = useMediaPredicate("(min-width: 1300px)");
+  const history = useHistory();
+  const [isHeader, setIsHeader] = useState(true);
+  const [currentState, setCurrentState] = useState("/home");
+  useEffect(() => {
+    history.listen((location) => {
+      setCurrentState(location.pathname);
+      // location.pathname === "/auth/dsp" || location.pathname === "/auth/ssp"
+      //   ? setIsHeader(false)
+      //   : setIsHeader(true);
+      // console.log(`You changed the page to: ${location.pathname}  ${isHeader}`);
+    });
+  }, []);
   return (
-    <HeaderDiv>
+    <HeaderDiv
+      style={{
+        display:
+          currentState === "/auth/ssp" || currentState === "/auth/dsp"
+            ? "none"
+            : "flex",
+      }}
+    >
       <NavOpener onClick={() => setIsNavBar(!isNavBar)} />
       <TitleDiv>
         <HeaderImg src={companyImg} />
         <HeaderTitle>
           <SimpleLink
+            onClick={() => setIsNavBar(!isNavBar)}
             color={"#ffffff"}
             to="/home"
             style={{ textDecoration: "none" }}
@@ -180,6 +202,7 @@ const Header = () => {
       <NavDiv
         style={{
           display: isNavBar || isDesktop ? "block" : "none",
+          transitionDuration: "0.7s",
         }}
       >
         <NavList>
@@ -188,16 +211,22 @@ const Header = () => {
             <DropDownDiv>
               <DropDownItem>
                 <SimpleLink
-                  color={"#000000"}
+                  onClick={() => setIsNavBar(!isNavBar)}
+                  color={
+                    currentState === "/marketplace" ? "#fcbe46" : "#000000"
+                  }
                   to="/marketplace"
-                  style={{ textDecoration: "none" }}
+                  style={{
+                    textDecoration: "none",
+                  }}
                 >
                   MarketPlace
                 </SimpleLink>
               </DropDownItem>
               <DropDownItem>
                 <SimpleLink
-                  color={"#000000"}
+                  onClick={() => setIsNavBar(!isNavBar)}
+                  color={currentState === "/bidder" ? "#fcbe46" : "#000000"}
                   to="/bidder"
                   style={{ textDecoration: "none" }}
                 >
@@ -206,7 +235,8 @@ const Header = () => {
               </DropDownItem>
               <DropDownItem>
                 <SimpleLink
-                  color={"#000000"}
+                  onClick={() => setIsNavBar(!isNavBar)}
+                  color={currentState === "/adexchange" ? "#fcbe46" : "#000000"}
                   to="/adexchange"
                   style={{ textDecoration: "none" }}
                 >
@@ -217,16 +247,20 @@ const Header = () => {
           </NavListItemDrop>
           <NavListItem color={"#ffffff"}>
             <SimpleLink
-              color={"#ffffff"}
+              onClick={() => setIsNavBar(!isNavBar)}
+              color={currentState === "/demandpartner" ? "#fcbe46" : "#ffffff"}
               to="/demandpartner"
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+              }}
             >
               Demand Partners
             </SimpleLink>
           </NavListItem>
           <NavListItem color={"#ffffff"}>
             <SimpleLink
-              color={"#ffffff"}
+              onClick={() => setIsNavBar(!isNavBar)}
+              color={currentState === "/enduser" ? "#fcbe46" : "#ffffff"}
               to="/enduser"
               style={{ textDecoration: "none" }}
             >
@@ -240,6 +274,7 @@ const Header = () => {
             <DropDownDiv>
               <DropDownItem>
                 <SimpleLink
+                  onClick={() => setIsNavBar(!isNavBar)}
                   color={"#000000"}
                   to="/auth/dsp"
                   style={{ textDecoration: "none" }}
@@ -249,8 +284,8 @@ const Header = () => {
               </DropDownItem>
               <DropDownItem>
                 <SimpleLink
+                  onClick={() => setIsNavBar(!isNavBar)}
                   color={"#000000"}
-                  to="/auth/ssp"
                   style={{ textDecoration: "none" }}
                 >
                   SSP
