@@ -1,47 +1,28 @@
 import React from "react";
-import styled from "styled-components";
-import { Header } from "../components/header";
 import ContactUs from "../components/contactus";
-import articleimg from "../images/articleimg.png";
+import styled from "styled-components";
 import { InfoBlock } from "../components/infoblock";
+import { HomePageDiv, TitleDiv, PageHeaderInfo, PageHeading } from "./home";
 
-const BidderPageDiv = styled.div`
-  display: flex;
-  flex: wrap;
-  flex-direction: column;
-  max-width: 100%;
-`;
-const TitleDiv = styled.div`
-  width: 100%;
-  background-color: #211551;
-  padding-top: 150px;
-`;
-const PageHeaderInfo = styled.p`
-  width: 60%;
-  font-size: 33px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 60px;
-  margin-top: 20px;
-  margin-bottom: 60px;
-`;
-const PageHeading = styled.p`
+const BidderPageDiv = HomePageDiv;
+const DemandPageHeading = styled.div`
   width: 90%;
   font-size: 45px;
   color: #ffffff;
   text-align: center;
   margin-bottom: 45px;
-  @media (min-width: 600px) {
+  @media (min-width: 900px) {
     font-size: 102px;
   }
 `;
-
 const DemandPartnerPage = () => {
   return (
     <BidderPageDiv>
       <TitleDiv>
         <center>
-          <PageHeading>Manage and advance your mobile campaigns</PageHeading>
+          <DemandPageHeading>
+            Manage and advance your mobile campaigns
+          </DemandPageHeading>
           <PageHeaderInfo>with the BidMachine demand platform</PageHeaderInfo>
           <div
             style={{
