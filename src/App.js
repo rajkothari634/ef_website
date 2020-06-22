@@ -23,7 +23,11 @@ const App = () => {
   return (
     <MainDiv>
       <Header />
-      <Route exact path="/" component={HomePage}></Route>
+      <Route
+        exact
+        path="https://rajkothari634.github.io/ef_website/"
+        component={HomePage}
+      ></Route>
       <Route path="/home" component={HomePage}></Route>
       <Route path="/auth/dsp" component={DspAuth}></Route>
       <Route path="/auth/ssp" component={SspAuth}></Route>
