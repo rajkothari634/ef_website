@@ -39,6 +39,7 @@ const BidderPageDiv = HomePageDiv;
 // `;
 
 const BidderPage = () => {
+  window.scrollTo(0, 0);
   return (
     <BidderPageDiv>
       <TitleDiv>
