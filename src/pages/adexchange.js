@@ -12,6 +12,7 @@ import {
 const AdExchangeDiv = HomePageDiv;
 
 const AdExchangePage = (props) => {
+  window.scrollTo(0, 0);
   return (
     <AdExchangeDiv>
       <TitleDiv>
