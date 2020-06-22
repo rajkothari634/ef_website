@@ -17,7 +17,7 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
-    "start": "HOST = https://rajkothari634.github.io/ef_website/ react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
