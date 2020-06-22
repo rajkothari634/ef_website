@@ -166,7 +166,15 @@ const Header = () => {
   const isDesktop = useMediaPredicate("(min-width: 1300px)");
   const history = useHistory();
   const [isHeader, setIsHeader] = useState(true);
-  const [currentState, setCurrentState] = useState("/home");
+  const [currentState, setCurrentState] = useState(
+    window.location.pathname.substring(window.location.pathname.length - 3) ===
+      "dsp" ||
+      window.location.pathname.substring(
+        window.location.pathname.length - 3
+      ) === "ssp"
+      ? "/auth/dsp"
+      : "/home"
+  );
   useEffect(() => {
     history.listen((location) => {
       setCurrentState(location.pathname);
@@ -287,6 +295,7 @@ const Header = () => {
                   onClick={() => setIsNavBar(!isNavBar)}
                   color={"#000000"}
                   style={{ textDecoration: "none" }}
+                  to="/auth/ssp"
                 >
                   SSP
                 </SimpleLink>
