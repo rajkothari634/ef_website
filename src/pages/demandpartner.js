@@ -16,6 +16,7 @@ const DemandPageHeading = styled.div`
   }
 `;
 const DemandPartnerPage = () => {
+  window.scrollTo(0, 0);
   return (
     <BidderPageDiv>
       <TitleDiv>
