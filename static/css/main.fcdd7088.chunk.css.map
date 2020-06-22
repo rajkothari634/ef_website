@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,KACE,QAAS,CACT,SACF,CAEA,EACE,uBACF","file":"main.fcdd7088.chunk.css","sourcesContent":["body {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n* {\r\n  transition-duration: 0.4s;\r\n}\r\n"]}
