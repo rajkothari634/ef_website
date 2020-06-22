@@ -27,6 +27,7 @@ const BtnDiv = styled.div`
 `;
 
 const MarketPlacePage = () => {
+  window.scrollTo(0, 0);
   return (
     <MarketPageDiv>
       <TitleDiv>
