@@ -48,6 +48,7 @@ const ResponsiveBtn = styled(ContactBtn)`
 `;
 
 const EndUser = () => {
+  window.scrollTo(0, 0);
   return (
     <EndUserDiv>
       <TitleDiv>
