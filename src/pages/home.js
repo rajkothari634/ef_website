@@ -72,6 +72,7 @@ const TaskInfo = styled.div`
 `;
 
 const HomePage = () => {
+  window.scrollTo(0, 0);
   return (
     <HomePageDiv>
       <TitleDiv>
